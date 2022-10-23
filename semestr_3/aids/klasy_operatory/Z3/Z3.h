@@ -17,32 +17,34 @@ public:
         urojona = _urojona;
     }
 
-    static void KonwertujModulo (Z3& konwertowana) { // nie wiem, jak zrobic to jako operator, jest wiec jako statyczna metoda
-        int modRzeczywista = (short int) konwertowana.rzeczywista;
-        int modUrojona = (short int) konwertowana.urojona;
+    operator short int () {
+        int modRzeczywista = (short int) this->rzeczywista;
+        int modUrojona = (short int) this->urojona;
         switch (modRzeczywista % 3) {
             case 0:
-                konwertowana.rzeczywista = 0;
+                this->rzeczywista = 0;
                 break;
             case 1:
-                konwertowana.rzeczywista = 1;
+                this->rzeczywista = 1;
                 break;
             case 2:
-                konwertowana.rzeczywista = 2;
+                this->rzeczywista = 2;
                 break;
         }
+
         switch (modUrojona % 3) {
             case 0:
-                konwertowana.urojona = 0;
+                this->urojona = 0;
                 break;
             case 1:
-                konwertowana.urojona = 1;
+                this->urojona = 1;
                 break;
             case 2:
-                konwertowana.urojona = 2;
+                this->urojona = 2;
                 break;
         }
     }
+
 
     Z3 operator += (Z3& temp){
         Z3 wynik;
@@ -101,8 +103,9 @@ Z3 operator/ (Z3& lewo, Z3 prawo){
 }
 
 ostream& operator<<(ostream& strumyk,Z3 doWypisania){
-    doWypisania.KonwertujModulo(doWypisania);
+    doWypisania.operator short ();
     strumyk << "%3: " << doWypisania.rzeczywista << "+" << doWypisania.urojona << "i" << endl;
     return strumyk;
 }
 #endif //Z3_Z3_H
+
