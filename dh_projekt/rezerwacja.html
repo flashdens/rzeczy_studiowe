@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="./styluwa.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAPIĄTk- Twój artysta na imprezę okolicznościową!</title>
+    <style>
+        #opis {
+            height: 200px;
+        }
+
+        * {
+            overflow: hidden;
+        }
+
+        h1 {
+            font-family: 'comic sans ms';
+            font-size: 50px;
+        }
+
+        h2 {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body class="dupsko">
+
+    <img src="./The-Weeknd-Blinding-Lights.jpg" class="tlo">
+    <div class="header">
+
+        <div class="pasek">
+
+            <a href="./glowna.html">ZAPIĄTk</a>
+            <a href="./bio.html">Biografia</a>
+            <a href="./galeria.html">Galeria</a>
+            <a href="./cennik.html">Cennik</a>
+            <a href="./sklep.html">Sklep</a>
+            <a href="./rezerwacja.html">ZAREZERWUJ!</a>
+        </div>
+
+        <h1>Zainteresowani niezapomnianą imprezą z ZAPIĄTkiem?</h1>
+
+        <h2>Zarezerwujcie termin już teraz!</h2>
+
+
+        <form method="POST" action="https://wierzba.wzks.uj.edu.pl/~escibisz/DH/test.php">
+
+            <label for="name">Imię:</label><br>
+            <input type="text" name="name" id="name"><br>
+            <label for="surname">Nazwisko:</label><br>
+            <input type="text" name="surname" id="surname"><br>
+            <label for="gender">Płeć:</label><br>
+            <select name="gender">
+                <option value="n" selected="selected">-</option>
+                <option value="m">Mężczyzna</option>
+                <option value="f">Kobieta</option>
+                <option value="o">Inna</option>
+                <option value="d">Nie chcę podawać</option>
+            </select><br>
+            <label for="typ_imprezy">Typ imprezy:</label><br>
+            <select name="typ_imprezy">
+                <option value="n" selected="selected">-</option>
+                <option value="wm">Wesele<em></em></option>
+                <option value="c">Chrzciny</option>
+                <option value="k">Komunia</option>
+                <option value="i">Inne</option>
+            </select><br>
+            <label for="termin">Jaka data państwa interesuje? (dzień/miesiąc/rok):</label><br>
+            <input type="date" name="data" id="data"><br>
+            <label for="email">Adres e-mail do kontaktu:</label><br>
+            <input type="text" name="name" id="email"><br>
+            <label for="phone">Nr telefonu:</label><br>
+            <input type="text" name="phone" id="phone"><br>
+            <label for="remark">Prosimy opisać wstępnie zamysł Państwa imprezy:</label><br>
+            <div id="opis"><textarea name="remark" id="remark" cols="30" rows="10"></textarea>
+            </div>
+            <input type="checkbox" id="regulamin" name="regulamin" value="regulamin" required>
+            <label>Oświadczamy, że zapozanliśmy się z Regulaminem Usług firmy "ZAPIĄTk sp. z. o. o."</label><br>
+
+
+            <button type="submit">Wyślij wiadomość</button>
+        </form>
+    </div>
+</body>
+
+</html>
