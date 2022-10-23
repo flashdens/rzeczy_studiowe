@@ -1,0 +1,13 @@
+Dla liczb urojonych 2+2i oraz 69+4i
++: 71+6i
+-: -67+-2i
+*: 138+8i
+/: 0.0289855+0.5i
++=: 71+6i
+-=: -67+-2i
+*=: 138+8i
+/=: 0.0289855+0.5i
+Zespolona1 %3: 2+2i
+Zespolona2 %3: 0+1i
+
+Process finished with exit code 0
